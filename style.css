@@ -516,7 +516,7 @@ h3 > .jesuis {
 .portfolio .pUl .pLi {
   width: 90%;
   height: 100px;
-  overflow: hidden;
+  overflow-y: hidden;
   transition: 0.5s ease;
   opacity: 0;
   animation: slideTop 0.7s ease forwards;
@@ -527,7 +527,7 @@ h3 > .jesuis {
   .sectionPortfolio {
     top: 15%;
     width: 100%;
-    overflow: scroll;
+    overflow-y: scroll;
   }
 
   .portfolio .pUl .pLi {
@@ -611,6 +611,13 @@ h3 > .jesuis {
 
 .hidden-section {
   display: none;
+}
+
+footer {
+  position: fixed;
+  bottom: 15px;
+  right: 30px;
+  font-size: 0.7rem;
 }
 
 /* BODY --- END */
