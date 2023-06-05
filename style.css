@@ -509,7 +509,7 @@ h3 > .jesuis {
   width: 100%;
   padding: 0 5%;
   position: fixed;
-  overflow-y: scroll hidden;
+  overflow-y: scroll;
   height: 75vh;
 }
 
@@ -527,16 +527,23 @@ h3 > .jesuis {
   .sectionPortfolio {
     top: 15%;
     width: 100%;
-    overflow: scroll hidden;
+    overflow: scroll;
   }
 
   .portfolio .pUl .pLi {
     width: 70%;
+    height: 150px;
   }
 }
 
 .portfolio .pUl .pLi:hover {
-  height: 300px;
+  height: 350px;
+}
+
+@media screen and (min-width: 768px) {
+  .portfolio .pUl .pLi:hover {
+    height: 500px;
+  }
 }
 
 .pLi {
@@ -579,7 +586,7 @@ h3 > .jesuis {
 
 .pBtn {
   display: inline-block;
-  padding: 1px 25px;
+  padding: 20px 30px;
   background: var(--active-color);
   border-radius: 40px;
   box-shadow: 0 0 10px var(--active-color);
@@ -591,6 +598,14 @@ h3 > .jesuis {
   font-weight: 600;
   bottom: 10px;
   position: fixed;
+}
+
+.pLi:hover .pBtn {
+  display: inline-block;
+}
+
+.pLi .pBtn {
+  display: none;
 }
 /* PORTFOLIO --- END */
 
