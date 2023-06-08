@@ -422,16 +422,34 @@ h3 > .jesuis {
 /* HOME --- END */
 
 /* ABOUT US --- START */
+
 .sectionAboutus {
   margin: 120px auto 0 auto;
   width: 100%;
-  padding: 0 10%;
   position: fixed;
-  overflow-y: scroll;
   height: 75vh;
-  transition: 0.8s;
+  transition: 0.4s;
   opacity: 0;
   animation: slideTop 1s ease forwards;
+  background-image: url(./assets/Aboutimg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.aboutText {
+  margin: 10px;
+  padding: 0px 10px 10px 10px;
+  width: 93%;
+  height: 73vh;
+  overflow-y: scroll;
+  color: var(--text-dark-mode);
+  text-shadow: 2px 2px 5px black;
+  border: 1px solid var(--bg-light-mode);
+  border-radius: 20px;
+  background: #30445fb3;
+  animation: zoomIn 1s ease forwards;
+  transition: 0.4s;
 }
 
 @media screen and (min-width: 768px) {
@@ -440,6 +458,11 @@ h3 > .jesuis {
     top: 22%;
     margin: 0;
     width: 100%;
+    background-position: right;
+  }
+
+  .aboutText {
+    width: 40%;
   }
 }
 /* ABOUT US --- END */
