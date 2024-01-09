@@ -6,69 +6,69 @@ document.addEventListener("DOMContentLoaded", function () {
     backDelay: 1000,
     loop: true,
   });
+});
 
-  const checkbox = document.getElementById("checkbox");
-  const elements = document.getElementsByTagName("*");
-  const imageLogo = document.getElementById("logo");
-  const iconDarkMode = document.getElementById("iconDarkMode");
+const checkbox = document.getElementById("checkbox");
+const elements = document.getElementsByTagName("*");
+const imageLogo = document.getElementById("logo");
+const iconDarkMode = document.getElementById("iconDarkMode");
 
-  checkbox.addEventListener("change", () => {
-    for (let i = 0; i < elements.length; i++) {
-      elements[i].classList.toggle("dark");
-    }
+checkbox.addEventListener("change", () => {
+  for (let i = 0; i < elements.length; i++) {
+    elements[i].classList.toggle("dark");
+  }
 
-    if (checkbox.checked) {
-      imageLogo.src = "./assets/logo_dark.png";
-      iconDarkMode.src = "./assets/moon_icon.png";
-    } else {
-      imageLogo.src = "./assets/logo_light.png";
-      iconDarkMode.src = "./assets/sun_icon.png";
-    }
-  });
+  if (checkbox.checked) {
+    imageLogo.src = "./assets/logos/logo-white200x150.svg";
+    iconDarkMode.src = "./assets/icons/moon.webp";
+  } else {
+    imageLogo.src = "./assets/logos/logo-blue200x150.svg";
+    iconDarkMode.src = "./assets/icons/sun.webp";
+  }
+});
 
-  const navbar = document.querySelector(".navbar");
-  const links = document.querySelectorAll(".navbar ul.menu li a");
+const navbar = document.querySelector(".navbar");
+const links = document.querySelectorAll(".navbar ul.menu li a");
 
-  links.forEach(function (link) {
-    link.addEventListener("click", function (e) {
-      e.preventDefault();
-      const targetId = this.getAttribute("href");
+links.forEach(function (link) {
+  link.addEventListener("click", function (e) {
+    e.preventDefault();
+    const targetId = this.getAttribute("href");
 
-      const sections = document.querySelectorAll("section");
-      sections.forEach(function (section) {
-        section.style.display = "none";
-      });
-
-      const targetSection = document.querySelector(targetId);
-      if (targetSection) {
-        targetSection.style.display = "initial";
-
-        links.forEach(function (link) {
-          link.classList.remove("active");
-        });
-        this.classList.add("active");
-      }
+    const sections = document.querySelectorAll("section");
+    sections.forEach(function (section) {
+      section.style.display = "none";
     });
 
-    if (link.getAttribute("href") === "#home") {
-      link.classList.add("active");
+    const targetSection = document.querySelector(targetId);
+    if (targetSection) {
+      targetSection.style.display = "initial";
 
-      const sectionHome = document.querySelector("#home");
-      if (sectionHome) {
-        sectionHome.style.display = "initial";
-      }
+      links.forEach(function (link) {
+        link.classList.remove("active");
+      });
+      this.classList.add("active");
     }
   });
 
-  const toggleButtons = document.querySelectorAll(".toggle-button");
+  if (link.getAttribute("href") === "#home") {
+    link.classList.add("active");
 
-  toggleButtons.forEach((button) => {
-    button.addEventListener("click", () => {
-      const hiddenSections = document.querySelectorAll(".hidden-section");
+    const sectionHome = document.querySelector("#home");
+    if (sectionHome) {
+      sectionHome.style.display = "initial";
+    }
+  }
+});
 
-      hiddenSections.forEach((section) => {
-        section.style.display = "block";
-      });
+const toggleButtons = document.querySelectorAll(".toggle-button");
+
+toggleButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const hiddenSections = document.querySelectorAll(".hidden-section");
+
+    hiddenSections.forEach((section) => {
+      section.style.display = "block";
     });
   });
 });
