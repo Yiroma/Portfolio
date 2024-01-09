@@ -1,11 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 :root {
-  --bg-light-mode: #ececeb;
-  --text-light-mode: #2f435e;
-  --bg-dark-mode: #2f435e;
-  --text-dark-mode: #ececeb;
-  --active-color: #6895cf;
+  --active: #375b9b;
+  --black: #303030;
+  --bg-light-mode: #fcfcfc;
+  --bg-dark-mode: #20304a;
+  --text-light-mode: #375b9b;
+  --text-dark-mode: #fcfcfc;
 }
 
 * {
@@ -17,7 +18,7 @@
 
 body {
   background: var(--bg-light-mode);
-  color: var(--text-light-mode);
+  color: var(--black);
   transition: background 0.2s linear;
 }
 
@@ -54,7 +55,7 @@ body.dark {
   left: 0;
   cursor: default;
   transition: filter 1s linear;
-  animation: slideRight 1s ease forwards;
+  animation: slideRight 0.3s ease forwards;
 }
 
 .logo .dark {
@@ -70,10 +71,10 @@ body.dark {
   text-decoration: none;
   font-weight: 500;
   margin: 0 20px;
-  transition: 0.3s;
+  transition: 0.2s linear;
   opacity: 0;
-  animation: slideTop 0.5s ease forwards;
-  animation-delay: calc(0.2s * var(--i));
+  animation: slideTop 0.2s ease forwards;
+  animation-delay: calc(0.1s * var(--i));
 }
 
 .navbar .dark {
@@ -82,7 +83,8 @@ body.dark {
 
 .navbar a:hover,
 .navbar a.active {
-  color: var(--active-color);
+  color: var(--active);
+  border-bottom: 2px Solid var(--active);
 }
 
 .menu {
@@ -277,8 +279,8 @@ body.dark {
   font-size: 1.2rem;
   font-weight: 600;
   opacity: 0;
-  animation: slideBottom 1s ease forwards;
-  animation-delay: 0.7s;
+  animation: slideBottom 0.3s ease forwards;
+  animation-delay: 0.3s;
 }
 
 h3 > .jesuis {
@@ -286,13 +288,13 @@ h3 > .jesuis {
 }
 
 .home-content h3 span.multi-text {
-  color: var(--active-color);
+  color: var(--active);
 }
 
 .home-content h3:nth-of-type(2) {
   margin-bottom: 15px;
-  animation: slideTop 1s ease forwards;
-  animation-delay: 0.7s;
+  animation: slideTop 0.3s ease forwards;
+  animation-delay: 0.2s;
 }
 
 .home-content h1 {
@@ -300,21 +302,21 @@ h3 > .jesuis {
   font-weight: 700;
   margin: -3px 0;
   opacity: 0;
-  animation: slideRight 1s ease forwards;
-  animation-delay: 1s;
+  animation: slideRight 0.3s ease forwards;
+  animation-delay: 0.3s;
 }
 
 .home-content p {
   font-size: 1rem;
   opacity: 0;
-  animation: slideLeft 1s ease forwards;
-  animation-delay: 1s;
+  animation: slideLeft 0.3s ease forwards;
+  animation-delay: 0.3s;
 }
 
 .img-profil {
   opacity: 0;
-  animation: zoomIn 1s ease forwards, floatImage 4s ease-in-out infinite;
-  animation-delay: 2s, 3s;
+  animation: zoomIn 0.5s ease forwards, floatImage 15s ease-in-out infinite;
+  animation-delay: 0.2s, 0.5s;
 }
 
 .img-profil > img {
@@ -328,30 +330,30 @@ h3 > .jesuis {
   width: 40px;
   height: 40px;
   background: transparent;
-  border: 2px solid var(--active-color);
+  border: 2px solid var(--active);
   border-radius: 50%;
   font-size: 1.2rem;
-  color: var(--active-color);
+  color: var(--active);
   text-decoration: none;
   margin: 10px;
-  transition: 0.5s ease;
+  transition: 0.3s ease;
   opacity: 0;
-  animation: slideLeft 0.7s ease forwards;
-  animation-delay: calc(0.2s * var(--i));
+  animation: slideLeft 0.3s ease forwards;
+  animation-delay: calc(0.05s * var(--i));
 }
 
 .social-media a:hover {
-  background: var(--active-color);
+  background: var(--active);
   color: var(--text-dark-mode);
-  box-shadow: 0 0 20px var(--active-color);
+  box-shadow: 0 0 20px var(--active);
 }
 
 .btn {
   display: inline-block;
   padding: 12px 28px;
-  background: var(--active-color);
+  background: var(--active);
   border-radius: 40px;
-  box-shadow: 0 0 10px var(--active-color);
+  box-shadow: 0 0 10px var(--active);
   font-size: 1rem;
   color: var(--text-dark-mode);
   letter-spacing: 1px;
@@ -360,12 +362,12 @@ h3 > .jesuis {
   font-weight: 600;
   opacity: 0;
   transition: 0.3s ease;
-  animation: slideTop 1s ease forwards;
-  animation-delay: 2s;
+  animation: slideTop 0.3s ease forwards;
+  animation-delay: 0.3s;
 }
 
 .btn:hover {
-  box-shadow: 0 0 20px var(--active-color);
+  box-shadow: 0 0 20px var(--active);
 }
 
 @media screen and (min-width: 768px) {
@@ -416,7 +418,7 @@ h3 > .jesuis {
   }
 
   .btn:hover {
-    box-shadow: 0 0 20px var(--active-color);
+    box-shadow: 0 0 20px var(--active);
   }
 }
 /* HOME --- END */
@@ -448,7 +450,7 @@ h3 > .jesuis {
   border: 1px solid var(--bg-light-mode);
   border-radius: 20px;
   background: #30445fb3;
-  animation: zoomIn 1s ease forwards;
+  animation: zoomIn 0.3s ease forwards;
   transition: 0.4s;
 }
 
@@ -490,6 +492,8 @@ h3 > .jesuis {
   justify-content: center;
   width: 100%;
   margin: 30px 0;
+  text-align: center;
+  font-size: 0.9rem;
 }
 
 .skills {
@@ -500,18 +504,18 @@ h3 > .jesuis {
   margin: 5px;
   width: 45%;
   height: 150px;
-  border: 2px solid var(--active-color);
+  border: 2px solid var(--active);
   border-radius: 10px;
-  transition: 0.5s ease;
+  transition: 0.2s ease-in-out;
   opacity: 0;
-  animation: slideLeft 0.7s ease forwards;
-  animation-delay: calc(0.2s * var(--i));
+  animation: slideLeft 0.3s ease forwards;
+  animation-delay: calc(0.05s * var(--i));
 }
 
 .skills:hover {
-  background: var(--active-color);
+  background: var(--active);
   color: var(--text-dark-mode);
-  box-shadow: 0 0 20px var(--active-color);
+  box-shadow: 0 0 20px var(--active);
 }
 
 .skills > i {
@@ -523,7 +527,6 @@ h3 > .jesuis {
     width: 16%;
   }
 }
-
 /* SKILLS --- END */
 
 /* PORTFOLIO --- START */
@@ -540,10 +543,10 @@ h3 > .jesuis {
   width: 90%;
   height: 100px;
   overflow-y: hidden;
-  transition: 0.5s ease;
+  transition: 0.3s ease-in-out;
   opacity: 0;
-  animation: slideTop 0.7s ease forwards;
-  animation-delay: calc(0.2s * var(--i));
+  animation: slideTop 0.3s ease forwards;
+  animation-delay: calc(0.07s * var(--i));
 }
 
 @media screen and (min-width: 768px) {
@@ -551,6 +554,7 @@ h3 > .jesuis {
     top: 15%;
     width: 100%;
     overflow-y: scroll;
+    height: 70vh;
   }
 
   .portfolio .pUl .pLi {
@@ -571,48 +575,60 @@ h3 > .jesuis {
 
 .pLi {
   margin: 10px auto;
-  padding: 10px;
   border: 1px solid;
   border-radius: 10px;
   color: var(--text-dark-mode);
   text-shadow: 1px 1px 3px black;
 }
 
-.p1 {
-  background-image: url(./assets/todowild_portofio.png);
+.p1,
+.p2,
+.p3,
+.p4,
+.p5,
+.p6 {
   background-size: cover;
   background-position: center;
+}
+
+.p1 {
+  background-image: url(./assets/portfolio/todowild.webp);
 }
 
 .p2 {
-  background-image: url(./assets/nutridrive_portfolio.png);
-  background-size: cover;
-  background-position: center;
+  background-image: url(./assets/portfolio/nutridrive.webp);
 }
 
 .p3 {
-  background-image: url(./assets/mysterytrip_portfolio.png);
-  background-size: cover;
-  background-position: center;
+  background-image: url(./assets/portfolio/mysterytrip.webp);
 }
 
 .p4 {
-  background-image: url(./assets/inprogress.png);
-  background-size: cover;
-  background-position: center;
+  background-image: url(./assets/portfolio/emmaus.webp);
 }
 
-.pA {
-  color: var(--text-dark-mode);
-  text-decoration: none;
+.p5 {
+  background-image: url(./assets/portfolio/vivid.webp);
+}
+
+.p6 {
+  background-image: url(./assets/portfolio/devmx.webp);
+}
+
+.pTitleAndDesc {
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(5px);
+  width: 100%;
+  padding: 5px 10px;
 }
 
 .pBtn {
   display: inline-block;
+  margin: 0 10px;
   padding: 20px 30px;
-  background: var(--active-color);
+  background: var(--active);
   border-radius: 40px;
-  box-shadow: 0 0 10px var(--active-color);
+  box-shadow: 0 0 10px var(--active);
   font-size: 1rem;
   color: var(--text-dark-mode);
   letter-spacing: 1px;
@@ -642,7 +658,6 @@ footer {
   right: 15px;
   font-size: 0.6rem;
 }
-
 /* BODY --- END */
 
 /* KEYFRAMES ANIMATION --- START*/
