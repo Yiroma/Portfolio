@@ -1,0 +1,120 @@
+/* PORTFOLIO */
+.sectionPortfolio {
+  margin: 120px auto 0 auto;
+  width: 100%;
+  padding: 0 5%;
+  position: fixed;
+  overflow-y: scroll;
+  height: 75vh;
+}
+
+.portfolio .pUl .pLi {
+  width: 90%;
+  height: 100px;
+  overflow-y: hidden;
+  transition: 0.3s ease-in-out;
+  opacity: 0;
+  animation: slideTop 0.3s ease forwards;
+  animation-delay: calc(0.07s * var(--i));
+}
+
+@media screen and (min-width: 768px) {
+  .sectionPortfolio {
+    top: 15%;
+    width: 100%;
+    overflow-y: scroll;
+    height: 70vh;
+  }
+
+  .portfolio .pUl .pLi {
+    width: 70%;
+    height: 150px;
+  }
+}
+
+.portfolio .pUl .pLi:hover {
+  height: 350px;
+}
+
+@media screen and (min-width: 768px) {
+  .portfolio .pUl .pLi:hover {
+    height: 500px;
+  }
+}
+
+.pLi {
+  margin: 10px auto;
+  border: 1px solid;
+  border-radius: 10px;
+  color: var(--dark-text);
+  text-shadow: 1px 1px 3px black;
+}
+
+.p1,
+.p2,
+.p3,
+.p4,
+.p5,
+.p6 {
+  background-size: cover;
+  background-position: center;
+}
+
+.p1 {
+  background-image: url(../../assets/portfolio/todowild.webp);
+}
+
+.p2 {
+  background-image: url(../../assets/portfolio/nutridrive.webp);
+}
+
+.p3 {
+  background-image: url(../../assets/portfolio/mysterytrip.webp);
+}
+
+.p4 {
+  background-image: url(../../assets/portfolio/emmaus.webp);
+}
+
+.p5 {
+  background-image: url(../../assets/portfolio/vivid.webp);
+}
+
+.p6 {
+  background-image: url(../../assets/portfolio/devmx.webp);
+}
+
+.pTitleAndDesc {
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(5px);
+  width: 100%;
+  padding: 5px 10px;
+}
+
+.pBtn {
+  display: inline-block;
+  margin: 0 10px;
+  padding: 20px 30px;
+  background: var(--light-active);
+  border-radius: 40px;
+  font-size: 1rem;
+  color: var(--dark-text);
+  letter-spacing: 1px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 600;
+  bottom: 10px;
+  position: fixed;
+}
+
+.pLi:hover .pBtn {
+  display: inline-block;
+}
+
+.pBtn:hover {
+  box-shadow: var(--dark-active);
+}
+
+.pLi .pBtn {
+  display: none;
+}

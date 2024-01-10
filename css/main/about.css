@@ -1,0 +1,45 @@
+/* ABOUT US */
+
+.sectionAboutus {
+  margin: 120px auto 0 auto;
+  width: 100%;
+  position: fixed;
+  height: 75vh;
+  transition: 0.2s;
+  opacity: 0;
+  animation: slideTop 1s ease forwards;
+}
+
+.aboutTextAndImg {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px auto;
+  padding: 10px;
+  width: 93%;
+  height: 73vh;
+  overflow-y: auto;
+  animation: zoomIn 0.3s ease forwards;
+  transition: 0.2s;
+}
+
+.aboutTextAndImg > picture > img {
+  width: 200px;
+}
+
+@media screen and (min-width: 768px) {
+  .sectionAboutus {
+    position: fixed;
+    top: 22%;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .aboutTextAndImg {
+    width: 90%;
+  }
+
+  .aboutTextAndImg > picture > img {
+    width: 350px;
+  }
+}

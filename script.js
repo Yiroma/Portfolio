@@ -23,7 +23,7 @@ function initDarkMode() {
   const iconDarkMode = document.getElementById("iconDarkMode");
 
   checkbox.addEventListener("change", () => {
-    elements.forEach((element) => element.classList.toggle("dark"));
+    elements.forEach((e) => e.classList.toggle("dark"));
 
     imageLogo.src = checkbox.checked
       ? "./assets/logos/logo-white200x150.svg"
@@ -33,38 +33,64 @@ function initDarkMode() {
 }
 
 function initNavigation() {
-  const links = document.querySelectorAll(".navbar ul.menu li a");
+  const links1 = document.querySelectorAll(".navbar .menu li a");
+  const links2 = document.querySelectorAll(".navbar .menu2 li a");
+  const logo = document.querySelector(".logoContainer");
 
-  links.forEach((link) => {
-    link.addEventListener("click", function (e) {
-      e.preventDefault();
-      const targetId = this.getAttribute("href");
-
-      document.querySelectorAll("section").forEach((section) => {
-        section.style.display = "none";
+  function initializeLinks(links) {
+    links.forEach((link) => {
+      link.addEventListener("click", function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute("href");
+        displaySection(targetId);
       });
 
-      const targetSection = document.querySelector(targetId);
-      if (targetSection) {
-        targetSection.style.display = "initial";
-
-        links.forEach((link) => link.classList.remove("active"));
-        this.classList.add("active");
+      if (link.getAttribute("href") === "#home") {
+        link.classList.add("active");
+        const sectionHome = document.querySelector("#home");
+        if (sectionHome) {
+          sectionHome.style.display = "initial";
+        }
       }
     });
+  }
 
-    if (link.getAttribute("href") === "#home") {
-      link.classList.add("active");
-      const sectionHome = document.querySelector("#home");
-      if (sectionHome) {
-        sectionHome.style.display = "initial";
-      }
-    }
+  initializeLinks(links1);
+  initializeLinks(links2);
+
+  logo.addEventListener("click", function (e) {
+    e.preventDefault();
+    const homeSectionId = "#home";
+    displaySection(homeSectionId);
   });
+}
+
+function displaySection(targetId) {
+  document.querySelectorAll("section").forEach((section) => {
+    section.style.display = "none";
+  });
+
+  const targetSection = document.querySelector(targetId);
+  if (targetSection) {
+    targetSection.style.display = "initial";
+
+    document.querySelectorAll(".navbar .menu li a").forEach((link) => {
+      link.classList.remove("active");
+    });
+
+    document.querySelectorAll(".navbar .menu2 li a").forEach((link) => {
+      link.classList.remove("active");
+    });
+
+    document.querySelector(`.navbar .menu li a[href="${targetId}"]`).classList.add("active");
+
+    document.querySelector(`.navbar .menu2 li a[href="${targetId}"]`).classList.add("active");
+  }
 }
 
 function initMenu() {
   const menuToggle = document.getElementById("menu-toggle");
+  const menuButton = document.querySelector(".menu-button::before");
   const menuLinks = document.querySelectorAll(".navbar a");
   const menuLabel = document.getElementById("menu-label");
 
@@ -72,6 +98,10 @@ function initMenu() {
     link.addEventListener("click", () => {
       menuToggle.checked = false;
     });
+  });
+
+  menuButton.addEventListener("click", () => {
+    menuToggle.checked = false;
   });
 
   menuLabel.addEventListener("click", () => {

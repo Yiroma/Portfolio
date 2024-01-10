@@ -32,19 +32,36 @@
 
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
 
-    <link rel="stylesheet" href="style.css" />
+    <!-- <link rel="stylesheet" href="styles.css" /> -->
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
+    <link rel="stylesheet" href="./css/main/home.css" />
+    <link rel="stylesheet" href="./css/main/about.css" />
+    <link rel="stylesheet" href="./css/main/skills.css" />
+    <link rel="stylesheet" href="./css/main/projects.css" />
   </head>
 
   <body>
     <header class="header">
-      <a href="#home">
+      <a class="logoContainer" href="#home">
         <img
           class="logo"
           id="logo"
           src="./assets/logos/logo-blue200x150.svg"
           alt="logo Yi Romaric"
         />
+        <span class="logoText">Yi Romaric</span>
       </a>
+
+      <div class="BtnDarkMode">
+        <input type="checkbox" class="checkbox" id="checkbox" />
+        <label for="checkbox" class="checkbox-label">
+          <span class="ball"
+            ><img src="./assets/icons/sun.webp" id="iconDarkMode" alt="Button dark mode"
+          /></span>
+        </label>
+      </div>
 
       <nav class="navbar">
         <input id="menu-toggle" type="checkbox" />
@@ -52,21 +69,18 @@
           <div class="menu-button"></div>
         </label>
         <ul class="menu">
-          <li><a href="#home" style="--i: 1" class=".toggle-button">Accueil</a></li>
-          <li><a href="#aboutus" style="--i: 2" class=".toggle-button">A propos</a></li>
-          <li><a href="#skills" style="--i: 3" class=".toggle-button">Skills</a></li>
-          <li><a href="#portfolio" style="--i: 4" class=".toggle-button">Projets</a></li>
+          <li><a href="#home" style="--i: 1" class="toggle-button">Accueil</a></li>
+          <li><a href="#aboutus" style="--i: 2" class="toggle-button">A propos</a></li>
+          <li><a href="#skills" style="--i: 3" class="toggle-button">Skills</a></li>
+          <li><a href="#portfolio" style="--i: 4" class="toggle-button">Projets</a></li>
+        </ul>
+        <ul class="menu2">
+          <li><a href="#home" style="--i: 1" class="toggle-button">Accueil</a></li>
+          <li><a href="#aboutus" style="--i: 2" class="toggle-button">A propos</a></li>
+          <li><a href="#skills" style="--i: 3" class="toggle-button">Skills</a></li>
+          <li><a href="#portfolio" style="--i: 4" class="toggle-button">Projets</a></li>
         </ul>
       </nav>
-
-      <div>
-        <input type="checkbox" class="checkbox" id="checkbox" />
-        <label for="checkbox" class="checkbox-label">
-          <span class="ball"
-            ><img src="./assets/icons/sun.webp" id="iconDarkMode" alt="icon dark mode"
-          /></span>
-        </label>
-      </div>
     </header>
 
     <main>
@@ -111,11 +125,7 @@
 
       <section class="sectionAboutus hidden-section" id="aboutus">
         <div class="aboutTextAndImg">
-          <h2>Bonjour,</h2>
-          <br />
           <p>
-            Je m’appelle Romaric YI et je suis développeur Web & Web mobile.
-            <br /><br />
             Après plusieurs années en tant que responsable magasin, j'ai décidé d'effectuer une
             reconversion professionnelle dans le Développement Web.
             <br /><br />
@@ -131,9 +141,9 @@
           </p>
 
           <picture>
-            <source srcset="./assets/yiroma1080.webp" media="(min-width: 768px)" alt="Yi Romaric" />
+            <source srcset="./assets/yiroma540.webp" media="(min-width: 768px)" alt="Yi Romaric" />
             <source srcset="./assets/yiroma270.webp" media="(max-width: 430px)" alt="Yi Romaric" />
-            <img src="./assets/yiroma540.webp" alt="Yi Romaric - Développeur Web et Web Mobile" />
+            <img src="./assets/yiroma270.webp" alt="Yi Romaric - Développeur Web et Web Mobile" />
           </picture>
         </div>
       </section>
