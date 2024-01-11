@@ -654,7 +654,7 @@ h3 > .jesuis {
   }
 
   .portfolio .pUl .pLi {
-    width: 70%;
+    width: clamp(310px, 100%, 1024px);
     height: 150px;
   }
 }
