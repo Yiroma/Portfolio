@@ -32,41 +32,48 @@
 
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
 
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styles.css" />
   </head>
 
   <body>
     <header class="header">
-      <a href="#home">
+      <a class="logoContainer" href="#home">
         <img
           class="logo"
           id="logo"
           src="./assets/logos/logo-blue200x150.svg"
           alt="logo Yi Romaric"
         />
+        <span class="logoText">Yi Romaric</span>
       </a>
 
-      <nav class="navbar">
-        <input id="menu-toggle" type="checkbox" />
-        <label class="menu-button-container" for="menu-toggle">
-          <div class="menu-button"></div>
-        </label>
-        <ul class="menu">
-          <li><a href="#home" style="--i: 1" class=".toggle-button">Accueil</a></li>
-          <li><a href="#aboutus" style="--i: 2" class=".toggle-button">A propos</a></li>
-          <li><a href="#skills" style="--i: 3" class=".toggle-button">Skills</a></li>
-          <li><a href="#portfolio" style="--i: 4" class=".toggle-button">Projets</a></li>
-        </ul>
-      </nav>
-
-      <div>
+      <div class="BtnDarkMode">
         <input type="checkbox" class="checkbox" id="checkbox" />
         <label for="checkbox" class="checkbox-label">
           <span class="ball"
-            ><img src="./assets/icons/sun.webp" id="iconDarkMode" alt="icon dark mode"
+            ><img src="./assets/icons/sun.webp" id="iconDarkMode" alt="Button dark mode"
           /></span>
         </label>
       </div>
+
+      <nav class="navbar">
+        <input id="menu-toggle" type="checkbox" />
+        <label id="menu-label" class="menu-button-container" for="menu-toggle">
+          <div class="menu-button"></div>
+        </label>
+        <ul class="menu">
+          <li><a href="#home" style="--i: 1" class="toggle-button">Accueil</a></li>
+          <li><a href="#aboutus" style="--i: 2" class="toggle-button">A propos</a></li>
+          <li><a href="#skills" style="--i: 3" class="toggle-button">Skills</a></li>
+          <li><a href="#portfolio" style="--i: 4" class="toggle-button">Projets</a></li>
+        </ul>
+        <ul class="menu2">
+          <li><a href="#home" style="--i: 1" class="toggle-button">Accueil</a></li>
+          <li><a href="#aboutus" style="--i: 2" class="toggle-button">A propos</a></li>
+          <li><a href="#skills" style="--i: 3" class="toggle-button">Skills</a></li>
+          <li><a href="#portfolio" style="--i: 4" class="toggle-button">Projets</a></li>
+        </ul>
+      </nav>
     </header>
 
     <main>
@@ -76,22 +83,11 @@
           <h1>Yi Romaric</h1>
           <h3><span class="jesuis">Je suis </span><span class="multi-text"></span></h3>
 
-          <figure>
-            <picture class="img-profil">
-              <source
-                srcset="./assets/yiroma1080.webp"
-                media="(min-width: 768px)"
-                alt="Yi Romaric"
-              />
-              <source
-                srcset="./assets/yiroma270.webp"
-                media="(max-width: 430px)"
-                alt="Yi Romaric"
-              />
-              <img src="./assets/yiroma540.webp" alt="Yi Romaric - Développeur Web et Web Mobile" />
-            </picture>
-            <figcaption>Yi Romaric - Développeur Web et Web Mobile</figcaption>
-          </figure>
+          <picture class="img-profil">
+            <source srcset="./assets/yiroma1080.webp" media="(min-width: 768px)" alt="Yi Romaric" />
+            <source srcset="./assets/yiroma270.webp" media="(max-width: 430px)" alt="Yi Romaric" />
+            <img src="./assets/yiroma540.webp" alt="Yi Romaric - Développeur Web et Web Mobile" />
+          </picture>
 
           <p>
             Titulaire du Titre Développeur Web & Web Mobile (DWWM), je suis disponible pour de
@@ -121,12 +117,8 @@
       </section>
 
       <section class="sectionAboutus hidden-section" id="aboutus">
-        <div class="aboutText">
-          <h2>Bonjour,</h2>
-          <br />
+        <div class="aboutTextAndImg">
           <p>
-            Je m’appelle Romaric YI et je suis développeur Web & Web mobile.
-            <br /><br />
             Après plusieurs années en tant que responsable magasin, j'ai décidé d'effectuer une
             reconversion professionnelle dans le Développement Web.
             <br /><br />
@@ -140,6 +132,12 @@
             Actuellement, je suis disponible pour intégrer une équipe avec qui je vais pouvoir
             améliorer et étendre mes connaissances.
           </p>
+
+          <picture class="ImgAboutUs">
+            <source srcset="./assets/yiroma540.webp" media="(min-width: 768px)" alt="Yi Romaric" />
+            <source srcset="./assets/yiroma270.webp" media="(max-width: 430px)" alt="Yi Romaric" />
+            <img src="./assets/yiroma270.webp" alt="Yi Romaric - Développeur Web et Web Mobile" />
+          </picture>
         </div>
       </section>
 
