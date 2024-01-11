@@ -49,7 +49,7 @@ function initNavigation() {
         link.classList.add("active");
         const sectionHome = document.querySelector("#home");
         if (sectionHome) {
-          sectionHome.style.display = "initial";
+          sectionHome.style.display = "block";
         }
       }
     });
