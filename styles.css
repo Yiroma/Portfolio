@@ -738,10 +738,6 @@ h3 > .jesuis {
   display: inline-block;
 }
 
-.pBtn:hover {
-  box-shadow: var(--dark-active);
-}
-
 .pLi .pBtn {
   display: none;
 }
