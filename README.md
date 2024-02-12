@@ -6,8 +6,6 @@ I'm happy to share it with you.
   <br>
   <img alt="YI Romaric" src="./assets/logos/logo-blue200x150.svg" width="300px">
   <h1>Yi Romaric - Portfolio</h1>
-  
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/slinkity/slinkity/blob/main/LICENSE.md)
 </div>
 <br>
 
