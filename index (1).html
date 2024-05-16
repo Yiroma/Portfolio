@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Portfolio Yi Romaric</title>
+
+    <link rel="icon" type="image" href="./assets/faviconYR.jpg" />
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <header class="header">
+      <a href="#home">
+        <img class="logo" id="logo" src="./assets/logo_light.png" alt="logo Yi Romaric" />
+      </a>
+
+      <nav class="navbar">
+        <input id="menu-toggle" type="checkbox" />
+        <label class="menu-button-container" for="menu-toggle">
+          <div class="menu-button"></div>
+        </label>
+        <ul class="menu">
+          <li><a href="#home" style="--i: 1" class=".toggle-button">Accueil</a></li>
+          <li><a href="#aboutus" style="--i: 2" class=".toggle-button">A propos</a></li>
+          <li><a href="#skills" style="--i: 3" class=".toggle-button">Skills</a></li>
+          <li><a href="#portfolio" style="--i: 4" class=".toggle-button">Portfolio</a></li>
+        </ul>
+      </nav>
+
+      <div>
+        <input type="checkbox" class="checkbox" id="checkbox" />
+        <label for="checkbox" class="checkbox-label">
+          <span class="ball"
+            ><img src="./assets/sun_icon.png" id="iconDarkMode" alt="icon dark mode"
+          /></span>
+        </label>
+      </div>
+    </header>
+
+    <section class="sectionHome" id="home">
+      <div class="home-content">
+        <h3>Bonjour, je me présente,</h3>
+        <h1>Yi Romaric</h1>
+        <h3><span class="jesuis">Je suis </span><span class="multi-text"></span></h3>
+
+        <div class="img-profil">
+          <img src="./assets/Yiroma Profile.png" alt="image-profile" />
+        </div>
+
+        <p>
+          Actuellement en formation Développeur Web / Web mobile, je suis à la recherche d'emploi
+          pour septembre 2023, en présentiel à Orléans et ses alentours (45), ou dans toute la
+          France en total remote.
+        </p>
+
+        <div class="social-media">
+          <a href="https://github.com/Yiroma" style="--i: 6" target="_blank"
+            ><i class="bx bxl-github"></i
+          ></a>
+          <a href="https://www.linkedin.com/in/yiromaric/" style="--i: 7" target="_blank"
+            ><i class="bx bxl-linkedin"></i
+          ></a>
+        </div>
+
+        <a href="./assets/CV_Romaric_YI_septembre_2023.pdf" class="btn">Mon CV</a>
+      </div>
+    </section>
+
+    <section class="sectionAboutus hidden-section" id="aboutus">
+      <div class="aboutText">
+        <h2>Bonjour,</h2>
+        <br />
+        <p>
+          Je m’appelle Romaric YI,
+          <br />
+          Je suis développeur Web / Web mobile.
+          <br /><br />
+          Auparavant, j’ai effectué plusieurs années en tant que responsable magasin de jeux vidéos,
+          ce qui m’a permis d’acquérir de très bonnes compétences telles que l’organisation,
+          l’écoute, le conseil, l'adaptabilité ainsi que des qualités relationnelles importantes.
+          <br /><br />
+          Malgré des résultats plus qu'honorables, le besoin de changement s'est fait sentir. J'ai
+          décidé d'effectuer une reconversion professionnelle dans le Développement Web, domaine qui
+          m’intéressait depuis de nombreuses années.
+          <br /><br />
+          J’ai donc suivi la formation intense Développeur Web / Web mobile au sein de la Wild Code
+          School. Celle-ci m'a fourni de solides compétences et connaissances ainsi que savoir
+          rester en veille technologique.
+          <br /><br />
+          Maintenant, je suis à la recherche d'un emploi et je suis disponible dès maintenant. Mon
+          ambition est d'intégrer une équipe afin de proposer, améliorer et étendre mes
+          connaissances.
+          <br /><br />
+          En novembre 2023, je passerais l'examen pour obtenir la certification du titre DWWM
+          (Bac+2).
+        </p>
+      </div>
+    </section>
+
+    <section class="sectionSkills hidden-section" id="skills">
+      <h2>Skills</h2>
+      <div class="skillsContainer">
+        <div class="skills" style="--i: 2">
+          <i class="bx bxl-html5"></i>
+          <h4>HTML</h4>
+        </div>
+        <div class="skills" style="--i: 3">
+          <i class="bx bxl-css3"></i>
+          <h4>CSS3</h4>
+        </div>
+        <div class="skills" style="--i: 4">
+          <i class="bx bxl-javascript"></i>
+          <h4>JavaScript</h4>
+        </div>
+        <div class="skills" style="--i: 5">
+          <i class="bx bxl-react"></i>
+          <h4>React</h4>
+        </div>
+        <div class="skills" style="--i: 6">
+          <i class="bx bx-data"></i>
+          <h4>MySQL</h4>
+        </div>
+        <div class="skills" style="--i: 7">
+          <i class="bx bxl-nodejs"></i>
+          <h4>Node.js<br />Express</h4>
+        </div>
+        <div class="skills" style="--i: 8">
+          <i class="bx bxl-sass"></i>
+          <h4>Sass</h4>
+        </div>
+        <div class="skills" style="--i: 9">
+          <i class="bx bxl-git"></i>
+          <h4>Git</h4>
+        </div>
+        <div class="skills" style="--i: 10">
+          <i class="bx bxl-github"></i>
+          <h4>Github</h4>
+        </div>
+        <div class="skills" style="--i: 11">
+          <i class="bx bxs-magic-wand"></i>
+          <h4>Agile<br />Scrum</h4>
+        </div>
+        <div class="skills" style="--i: 12">
+          <i class="bx bxl-figma"></i>
+          <h4>Figma</h4>
+        </div>
+      </div>
+    </section>
+
+    <section class="sectionPortfolio hidden-section" id="portfolio">
+      <h2>Portfolio</h2>
+      <div class="portfolio">
+        <ul class="pUl">
+          <li class="pLi p1" style="--i: 2">
+            <a class="pA" href="https://yiroma.github.io/TODOWILD_Yiroma/" target="_blank"
+              ><h4>Todo Wild</h4></a
+            >
+            <div>
+              <p>Création d'un site single page sur le thème d'une ToDo List</p>
+            </div>
+            <a href="https://yiroma.github.io/TODOWILD_Yiroma/" target="_blank" class="pBtn"
+              >visiter le site</a
+            >
+          </li>
+          <li class="pLi p2" style="--i: 3">
+            <a class="pA" href="https://nutri-drive.vercel.app/" target="_blank"
+              ><h4>NutriDrive</h4></a
+            >
+            <div>
+              <p>Prototype d'un site e-commerce focus sur le NutriScore</p>
+            </div>
+            <a href="https://nutri-drive.vercel.app/" target="_blank" class="pBtn"
+              >visiter le site</a
+            >
+          </li>
+          <li class="pLi p3" style="--i: 4">
+            <a class="pA" href="https://mystery-trip-omega.vercel.app/" target="_blank"
+              ><h4>Mystery Trip</h4></a
+            >
+            <div>
+              <p>Vous ne savez pas où voyager ? Mystery Trip trouve pour vous.</p>
+            </div>
+            <a href="https://mystery-trip-omega.vercel.app/" target="_blank" class="pBtn"
+              >visiter le site</a
+            >
+          </li>
+          <li class="pLi p4" style="--i: 5">
+            <a class="pA" href="" target="_blank"><h4>ViVID</h4></a>
+            <div>
+              <p>Site de streaming vidéo Freemium</p>
+            </div>
+            <a href="" target="_blank" class="pBtn">En cours...</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <footer>
+      <p>© YI Romaric 2023 Tous droits réservés</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
